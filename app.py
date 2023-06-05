@@ -36,7 +36,7 @@ def preprocess_image(image):
 
 
 def main():
-if uploaded_file is not None:
+ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
