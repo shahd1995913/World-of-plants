@@ -6,7 +6,17 @@ from tensorflow import keras
 import numpy as np
 from PIL import Image
 
-st.image("bacterial-spot-tomato.jpg", width=300 , height = 1000)
+  
+
+    # Open the image file using PIL
+image = Image.open("bacterial-spot-tomato.jpg")
+
+    # Resize the image
+resized_image = image.resize((300, 1000))
+
+    # Display the resized image
+st.image(resized_image, caption='Resized Image')
+
 
 class_names = [
     'Tomato blight disease',
