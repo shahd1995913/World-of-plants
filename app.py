@@ -6,8 +6,7 @@ from tensorflow import keras
 import numpy as np
 from PIL import Image
 
-logo_url = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F1045368942%2Fvector%2Fabstract-green-leaf-logo-icon-vector-design-ecology-icon-set-eco-icon.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DXIfHMI8r1G73blCpCBFmLIxCtOLx8qX0O3mZC9csRLs%3D&tbnid=8_bBa9lSbTSH-M&vet=12ahUKEwivg_bSp63_AhV3micCHXg4CdwQMygGegUIARDWAQ..i&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fvector%2Fabstract-green-leaf-logo-icon-vector-design-ecology-icon-set-eco-icon-gm1045368942-279747493&docid=qeRGDaFxhUDK2M&w=612&h=612&q=plants%20logo&ved=2ahUKEwivg_bSp63_AhV3micCHXg4CdwQMygGegUIARDWAQ"
-st.image(logo_url, width=100)
+st.image(tomatoes.jpg, width=100)
 
 class_names = [
     'Tomato blight disease',
