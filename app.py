@@ -30,20 +30,6 @@ def preprocess_image(image):
     return keras.applications.mobilenet.preprocess_input(img_array)
 
 def main():
-  import streamlit as st
-from PIL import Image
-
-class_names = [
-    'Tomato blight disease',
-    'Bacterial spot',
-    'Tomato Yellow Leaf Curl Virus',
-    'Tomato mosaic virus',
-    'Target Spot',
-    'Powdery mildew',
-    'Spider mites Two spotted spider mite'
-]
-
-def main():
     st.title("Image Classification")
 
     # Set the overall page width
@@ -87,28 +73,16 @@ def main():
         predicted_class_name = class_names[predicted_class_index]
         confidence = predictions[0][predicted_class_index] * 100
 
-        col2.markdown(
-            """
-            <div>
-                <h2 style='color: #0072B2;'>Predicted Class:</h2>
-                <h3 style='color: #0072B2;'>{}</h3>
+        col2.write("Predicted Class:")
+        col2.write(predicted_class_name)
 
-                <h2 style='color: #0072B2;'>Confidence:</h2>
-                <h3 style='color: #0072B2;'>{:.2f}%</h3>
+        col2.write("Confidence:")
+        col2.write("{:.2f}%".format(confidence))
 
-                <h2 style='color: #0072B2;'>Other Classes:</h2>
-            """.format(predicted_class_name, confidence),
-            unsafe_allow_html=True
-        )
-
+        col2.write("Other Classes:")
         for i, class_name in enumerate(class_names):
             if i != predicted_class_index:
-                col2.markdown(
-                    """
-                    <h3 style='color: #0072B2;'>{}: {:.2f}%</h3>
-                    """.format(class_name, predictions[0][i] * 100),
-                    unsafe_allow_html=True
-                )
+                col2.write("{}: {:.2f}%".format(class_name, predictions[0][i] * 100))
 
 
 
