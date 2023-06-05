@@ -104,7 +104,7 @@ def main():
                     </div>
                     """.format(class_name, predictions[0][i] * 100),
                     unsafe_allow_html=True
-               
+                )
 
 
 if __name__ == '__main__':
