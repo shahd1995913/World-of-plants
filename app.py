@@ -1,7 +1,4 @@
 import streamlit as st
-st.title("Image Classification")
-st.header("Upload a Image")
-st.text("Done by shahed Alhateeb 2023")
 import cv2
 from keras.models import load_model
 import tensorflow as tf
@@ -47,7 +44,10 @@ def main():
     )
 
     st.title("Image Classification")
+    st.subheader("Identifying plant diseases using artificial intelligence")
+
     st.subheader("Upload an image for classification")
+    st.text("Done by shahed Alhateeb 2023")
 
     uploaded_file = st.file_uploader("Choose an image", type=['jpg', 'jpeg', 'png'])
 
