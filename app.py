@@ -34,9 +34,14 @@ def preprocess_image(image):
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     return keras.applications.mobilenet.preprocess_input(img_array)
 
-
 def main():
- if uploaded_file is not None:
+   st.title("Image Classification")
+   st.write("Upload an image for classification.")
+
+   uploaded_file = st.file_uploader("Choose an image", type=['jpg', 'jpeg', 'png'])
+
+   if uploaded_file is not None:
+    
     image = Image.open(uploaded_file)
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
@@ -57,6 +62,11 @@ def main():
     for i, class_name in enumerate(class_names):
         if i != predicted_class_index:
             st.write(f"{class_name}: {predictions[0][i] * 100:.2f}%")
+
+
+
+if __name__ == '__main__':
+    main()
 
 
 if __name__ == '__main__':
