@@ -60,7 +60,7 @@ def main():
     )
 
     # Create columns for the image and predictions
-    col1, col2 = st.beta_columns([1, 1.5])
+    col1, col2 = st.columns([1, 1.5])
 
     col1.markdown(
         """
