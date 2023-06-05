@@ -6,7 +6,7 @@ from tensorflow import keras
 import numpy as np
 from PIL import Image
 
-st.image(tomatoes.jpg, width=100)
+st.image("tomatoes.jpg", width=100)
 
 class_names = [
     'Tomato blight disease',
