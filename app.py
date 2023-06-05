@@ -43,35 +43,6 @@ class_names = [
     'Spider mites Two spotted spider mite'
 ]
 
-st.markdown(
-    """
-    <style>
-    .centered {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .title {
-        font-size: 32px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .image-container {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .prediction-container {
-        margin-bottom: 20px;
-    }
-    .class-container {
-        margin-bottom: 10px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 
 st.markdown(
     """
