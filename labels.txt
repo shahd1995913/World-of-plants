@@ -1,0 +1,7 @@
+0 Tomato blight disease
+1 Bacterial spot
+2 Tomato Yellow Leaf Curl Virus
+3 Tomato mosaic virus
+4 Target Spot
+5 Powdery mildew
+6 Spider mites Two spotted spider mite
