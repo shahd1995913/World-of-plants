@@ -101,6 +101,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+import base64
+
+def image_to_base64(image):
+    buffered = BytesIO()
+    image.save(buffered, format="PNG")
+    return base64.b64encode(buffered.getvalue()).decode()
+
+
 def main():
     st.title("Image Classification")
     st.markdown('<div class="title">Image Classification</div>', unsafe_allow_html=True)
@@ -124,7 +132,7 @@ def main():
 
         st.markdown('<div class="prediction-container">Predicted Class: <strong>{}</strong></div>'.format(predicted_class_name), unsafe_allow_html=True)
         st.markdown('<div class="prediction-container">Confidence: <strong>{:.2f}%</strong></div>'.format(confidence), unsafe_allow_html=True)
-
+        
         st.markdown('<div class="class-container">Other Classes:</div>', unsafe_allow_html=True)
         for i, class_name in enumerate(class_names):
             if i != predicted_class_index:
